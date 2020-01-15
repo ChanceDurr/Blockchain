@@ -74,7 +74,7 @@ if __name__ == '__main__':
         # new_proof = ???
         print('Finding new proof')
         
-        new_proof = valid_proof(json.dumps(data), proof_of_work(data))
+        new_proof = proof_of_work(json.dumps(data))
 
         # When found, POST it to the server {"proof": new_proof, "id": id}
         print('Sending data to server')
