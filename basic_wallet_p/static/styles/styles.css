@@ -1,0 +1,25 @@
+body {
+    background: #555;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+    background: red;
+    padding: 10px;
+}
+
+.wrapper {
+    display: grid;
+    max-width: 500px;
+    margin: auto;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    background-color: red;
+    justify-content: center;
+}
+
+.box {
+    background-color: blue;
+    justify-content: center;
+}

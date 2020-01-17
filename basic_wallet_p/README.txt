@@ -10,3 +10,9 @@ This app should:
 Stretch Goals:
     * Use styling to visually distinguish coins sent and coins received
     * Paginate the list of transactions if there are more than ten
+
+Things I want to do:
+
+Create a user
+Start mining with that user
+Make transaction with another user

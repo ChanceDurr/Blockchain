@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<style>
+    body {
+        background: rgb(233, 233, 233);
+    }
+    .content {
+        max-width: 60%;
+        height: 100%;
+        margin: auto;
+        background: rgba(73, 73, 73, 0.616);
+        padding: 10px;
+    }
+    
+    .wrapper {
+        display: grid;
+        max-width: 500px;
+        margin: auto;
+        grid-template-columns: 400px 300px;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap: 10px;
+        justify-content: center;
+    }
+    
+    .box {
+        background-color: rgb(39, 39, 39);
+        justify-content: center;
+    }
+    .formbox {
+        background-color: rgb(39, 39, 39);
+    }
+    .transactions {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .form {
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .form-text {
+        background-color: rgb(197, 197, 197);
+        text-align: center;
+    }
+    .balance {
+        width: 280px;
+        height: 450px;
+        background-color: lightslategrey;
+        color: black;
+        border: none;
+        
+    }
+</style>
+
+<body>
+
+<div class="content">
+    <div class="wrapper">
+        <div class="box formbox">
+
+            <form class="form" method="POST" action="/get_balance" target="balance">
+                <label class="form-text">Check User Balance:</label><br><br>
+                <input name="id" id="id" value="Chance">
+                <button>Get Balance</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <form class="form" method="POST" action="/start_mining" target="balance">
+                <label class="form-text">Mine Some Coin:</label><br><br>
+                <input name="id" id="id" value="Enter ID">
+                <input name="coins" id="coins" value="Number of coins to mine">
+                <button>Start Mining</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <form class="form" method="POST" action="/transactions/new" target="balance">
+                <label class="form-text">Trade Coins:</label><br><br>
+                <input name="sender" id="sender" value="Sender">
+                <input name="recipient" id="recipient" value="Recipient">
+                <input name="amount" id="amount" value="Number of coins to send">
+                <button>Trade Coins</button>
+            </form>
+        </div>
+
+        <div class="box transactions">
+            <iframe class="balance" name="balance"></iframe>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
